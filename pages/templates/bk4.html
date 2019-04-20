@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Local Expo Mart - Nepali local market</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/simple-sidebar.css'%}">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'css/control.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'css/tab-panel.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'css/front.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <button onclick="topFunction()" id="gotoBtn" title="Go to top"><i class="fa fa-caret-up"></i></button>
+        <header class="main-header">
+            <nav class="navbar navbar-default">
+            
+                <div class="container">
+                    <div class="next-shipment">
+                        <p class="ttl">Next Shipment</p>
+                        <p id="demo"></p>
+                </div>
+                
+                
+                <div class="search-container google hidden-xs">
+                    <form method="get" action="http://www.google.com/search">
+                          <input type="text" name="q" id="askgoogle" size="31" maxlength="255" value="" placeholder="Ask Google" />
+                          <button type="submit" id="goosearch"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+               
+                <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-target="#navbar" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="http://localexpomart.com">
+                        <img class="image-responsive" alt="LocalExpoMart" src="/static/images/icons/logo.png"/ width='200' height='100'>
+                        </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                                    
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{% url 'index' %}">Home</a></li>
+
+
+                        <li class="dropdown">
+                            <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" aria-expanded="true"
+                                http="//yalamart.com/product/category">Product <span class="caret"></span></a>
+                            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                <li class="dropdown">
+                                    <a href="">Tea</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="">Handmade</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'faqs' %}">FAQs</a></li>
+                        <li><a href="{% url 'recommended-shops' %}">Recommended Shops</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'dashboard' %}">My Dashboard</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'quotes' %}">My Quotes</a></li>
+                                <li><a href="{% url 'orders' %}">My Orders</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                                <li><a href="{% url 'register' %}">Register</a></li>
+
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'estimate' %}">Estimate</a></li>
+                        <li>
+                            <a href="{% url 'cart' %}">
+                                <span class="cart"><img src="/static/images/icons/shopping-cart.png" alt="shopping-cart" width="19" height="20"></span>
+                                <span class="cart cart-total">NPR.0.00</span>
+                                <!-- <span class="caret"></span> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        
+        </nav>
+</header>
+<div class="container-fluid">
+    <div class="content-wrapper">
+		<div class="item-container prod-page">
+			<div class="container">
+				<div class="col-md-6">
+					<div class="product col-md-12 service-image-left">
+                        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                                        <div class="item active">
+                        <img src="/static/images/Jhamak.jpg" alt="">
+                    </div>
+                                                            <div class="item ">
+                        <img src="" alt="">
+                    </div>
+                                                        </div>
+            </div>
+					</div>
+
+					<div class="container service1-items col-md-12 pull-left">
+
+            <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                                    
+                    <div class="item active">
+                                                <div data-target="#carousel" data-slide-to="0" class="thumb">
+                          <img src="/static/images/Jhamak.jpg" alt="">
+                        </div>
+                                                                        <div data-target="#carousel" data-slide-to="1" class="thumb">
+                          <img src="/thumbs" alt="">
+                        </div>
+                                                                    </div><!-- /item -->
+                                  </div><!-- /carousel-inner -->
+                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+
+					</div>
+				</div>
+        <form name="productFrm" id="productFrm" method="post" action="http://yalamart.com/product/ajax/add-to-cart">
+          <input type="hidden" name="id" value="847">
+				<div class="col-md-6">
+					<div class="product-title">जीवन काँडा कि फूल [Jiwan Kada ki Phool] 
+
+                        by Jhamak Ghimire, झमक घिमिरे </div>
+					<div class="product-desc">
+            <div class="fb-share-button"
+                data-href="http://yalamart.com/item/puluz-40-40cm-light-box-photography-boxes"
+                data-layout="button" data-size="large">
+              </div>
+              <a href="https://twitter.com/intent/tweet?button=Tweet&ref_src=twsrc%5Etfw"
+                  class="twitter-hashtag-button" data-show-count="false" data-size="large">
+                    Tweet
+              </a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+					<div class="product-rating">#REF - 847</div>
+					<hr>
+          <input type="hidden" name="prodcurrency" id="prodcurrency" value="NPR">
+          <input type="hidden" name="prodprice" id="prodprice" value="16000">
+                    					<div class="product-price">
+            <span class="price-outer"> NPR<span id="priceq">350.00</span> </span>
+          </div>
+                    					<div class="product-stock">
+             In Stock           </div>
+          <hr>
+                              <div class="product-stock">
+              <label>Quantity</label>
+              <input type="number" min="1" name="prodqty" id="prodqty" value="1" placeholder="1" class="small form-control" required>
+          </div>
+          <hr>
+          
+					<div class="btn-group cart">
+            						<button type="submit" class="btn btn-success detailCart">Add to cart</button>
+            					</div>
+				</div>
+        <input type="hidden" name="_token" value="dFv1yCQnLSyAhpoEv4SvAqtPBOazs1H0TVV0wKwV">
+        </form>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="col-md-12 product-info">
+					<ul id="myTab" class="nav nav-tabs nav_tabs">
+						<li class="active"><a href="#service-one" data-toggle="tab">About the product</a></li>
+					</ul>
+				<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade in active" id="service-one">
+							<section class="container product-info"><p>Super bright to provide the adequate light source, providing even lighting to minimize shadows.<br />The light box with high reflective grain fabric, effectively enhance the brightness of light box.<br />It enables everyone to take awesome, studio-quality pictures with a smartphone using a simple setup.<br />All-in-one portable studio shooting box is easy to use.<br />Light board can be adjusted according to your own shooting needs.<br />Comes with a carrying bag for convenient storage.<br />Foldable design is space saving and very flexible, can be utilized on various occasions or in different places.<br /><br />Exquisite workmanship ensure good heat dissipation.<br />The background paper boards are wrinkle resistant and water resistant.<br />Very easy to install, no other tools needed for the installation and institutional.<br /><br />1 x Photographic Box<br />1 x Power Supply<br />2 x Light Boards<br />3 x Background Paper Boards(white, black, orange)<br />1 x Soft cloth<br />1 x Carry bag</p></section>
+						</div>
+				</div>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="modalEnquireForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Enquire Now</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/product/enquiry" method="post" name="frmEnquiry">
+              <input type="hidden" name="prodid" id="prodid" value="">
+            <div class="modal-body mx-3">
+
+                <div class="md-form mb-5">
+                    <i class="fa fa-user prefix grey-text"></i>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your name" class="form-control validate">
+                </div>
+
+                <div class="md-form mb-4">
+                    <i class="fa fa-envelope prefix grey-text"></i>
+                    <input type="email" id="email" name="email" placeholder="Your email" class="form-control validate">
+                </div>
+
+                <div class="md-form mb-4">
+                    <i class="fa fa-edit prefix grey-text"></i>
+                    <textarea name="message" id="message" rows="3" placeholder="Your message" class="form-control validate"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-primary">Enquire <i class="fa fa-paper-plane-o ml-1"></i></button>
+            </div>
+            <input type="hidden" name="_token" value="dFv1yCQnLSyAhpoEv4SvAqtPBOazs1H0TVV0wKwV">
+            </form>
+        </div>
+    </div>
+</div>
+
+	
+	<!-- Footer start -->
+<footer>
+    <div class="container mar-bottom-30">
+      <div class="row">
+        <div class="col-md-5">
+          <h3>About Local ExpoMart</h3>
+          <p>Local Expomart is an Online selling of local product of Nepal.
+            We facilitate you in buying the authentic Nepali products directly from the producers.
+            Also help the producers sell their locally made products in global market.</p>
+        </div>
+        <div class="col-md-3">
+          <h3>Quick Links</h3>
+          <ul class="quick">
+            <!-- <li><a href="#"><i class="fa fa-caret-right"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Team</a></li>-->
+            <li><a href="http://yalamart.com/business-policies"><i class="fa fa-caret-right"></i>Business Policies</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Return Policy</a></li>
+            <!-- <li><a href="http://yalamart.com/faqs"><i class="fa fa-caret-right"></i>Faqs</a></li> -->
+            <li><a href="http://yalamart.com/customer-review"><i class="fa fa-caret-right"></i>Customer Reviews</a></li>
+            <li><a href="http://yalamart.com/paynow"><i class="fa fa-caret-right"></i>How to pay</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+            <h3>Get in Touch</h3>
+            <p>Paknajol</p>
+            <p><strong>Email</strong>: LocalExpoMart@gmail.com</p>
+            <p><strong>Mobile</strong>: +977 9873467332</p>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/LocalExpoMart/" target="_blank"><i
+                            class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://twitter.com/LocalExpoMart" target="_blank"><i
+                            class="fab fa-twitter-square"></i></a></li>
+                <li><a href="https://instagram.com/LocalExpoMart" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+</footer>
+<div id="footer-container">
+  <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="copyright">
+                  <p>2017 © All Right Reserved.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--<a href="#" class="scrollToTop" title="click here for top"><i class="fa fa-angle-up"></i></a>-->
+<!-- Footer end -->
+
+<!-- jQuery -->
+<script src="http://yalamart.com/js/jquery.min.js"></script>
+<script src="http://yalamart.com/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://yalamart.com/js/owl.carousel.min.js"></script>
+<script src="http://yalamart.com/js/main.js"></script>
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("gotoBtn").style.display = "block";
+    } else {
+        document.getElementById("gotoBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    $('html,body').animate({ scrollTop: 0 }, 'slow');
+    //document.body.scrollTop = 0;
+    //document.documentElement.scrollTop = 0;
+}
+</script>
+<script src="http://yalamart.com/js/front.js"></script>
+<script>
+$(".detailCart").on('click', function(e){
+  e.preventDefault();
+  var _data = $('#productFrm').serialize();
+  //console.log(_data);
+  //return false;
+  $.ajax({
+      method: 'POST',
+      url: "http://yalamart.com/product/ajax/add-to-cart",
+      data:_data,
+      success: function(data){ // What to do if we succeed
+        //console.log(data);
+        _darr = data.split(';');
+        if(_darr[0]=='Succ')
+          $(".alertbox").show();
+          $(".alertbox").css('opacity','1');
+          $(".cart-total").html(_darr[1]);
+          setTimeout(function() {
+            $(".alertbox").fadeTo(500, 0).slideUp(500, function(){
+                $(this).hide();
+            });
+          }, 30000);
+          console.log(data);
+      },
+      error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
+          console.log(JSON.stringify(jqXHR));
+          console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+      }
+  });
+});
+$(function () {
+  _priceOption="";
+  _price = 16000;
+  _exRate = 114.27;
+    _priceOption = [];
+  _currency = 'NPR';
+  
+  $("#prodqty").on('change', function(){
+    //console.log(_currency);
+    if(_currency=='USD')
+      _totalPrice = _price*_exRate*$("#prodqty").val();
+    else
+      _totalPrice = _price*$("#prodqty").val();
+    _totalPrice = number_format(_totalPrice, 2, ".", ",")
+    //console.log(_totalPrice);
+    $("#priceq").text(_totalPrice);
+  });
+  $(".popts").on('change', function(){
+    if(_priceOption!="")
+    {
+        _optLen = _priceOption[0].length-1;
+        _selOpt = '';
+        _price = _price;
+        for(var i=0; i<_optLen; i++)
+        {
+          _selOpt += $("#option"+i).val()+"-";
+        }
+        _selOpt = _selOpt.substring(0, _selOpt.length - 1);
+        console.log("selected: "+_selOpt);
+        $.each(_priceOption, function(i, _priceO){
+          _optSav="";
+          for(var i=0; i<_optLen; i++)
+          {
+            _optSav += _priceO[i]+"-";
+          }
+          _optSav = _optSav.substring(0, _optSav.length - 1);
+          console.log("from db: "+_optSav);
+          _priceIndex = _priceO.length-1;
+          if(_selOpt==_optSav)
+            _price = _priceO[_priceIndex];
+
+          console.log(_price);
+        });
+        if(_price>0)
+        {
+          _original_price = _price;
+          if(_currency=='USD')
+            _price = _price*_exRate*$("#prodqty").val();
+          else
+            _price = _price*$("#prodqty").val();
+          _price = number_format(_price, 2, ".", ",");
+          $("#priceq").text(_price);
+          $("#prodprice").val(_original_price);
+          $(".price-outer").css('border', '1px solid #f00');
+        }
+      }
+        //console.log(_selOpt);
+        //console.log(_priceOption[0].length);
+    });
+
+});
+function number_format (number, decimals, dec_point, thousands_sep) {
+    // Strip all characters but numerical ones.
+    number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
+    var n = !isFinite(+number) ? 0 : +number,
+        prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+        sep = (typeof thousands_sep === 'undefined') ? ',' : thousands_sep,
+        dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+        s = '',
+        toFixedFix = function (n, prec) {
+            var k = Math.pow(10, prec);
+            return '' + Math.round(n * k) / k;
+        };
+    // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+    s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+    if (s[0].length > 3) {
+        s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+    }
+    if ((s[1] || '').length < prec) {
+        s[1] = s[1] || '';
+        s[1] += new Array(prec - s[1].length + 1).join('0');
+    }
+    return s.join(dec);
+}
+</script>
+<script>
+  $(document).ready(function () {
+    $('#goosearch').on('click', function(e){
+      e.preventDefault();
+      var url = "http://www.google.com/search?q="+$('#askgoogle').val();
+      window.open(url, '_blank');
+    });
+  });
+</script>
+<script>
+$('#modalEnquireForm').on('show.bs.modal', function(e) {
+	$(this).find('#prodid').attr('value', $(e.relatedTarget).data('id'));
+});
+</script>
+<script>
+document.getElementById("demo").innerHTML = "Starts Soon";
+</script>
+
+	</div>
+</body>
+</html>

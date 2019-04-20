@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="featured">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <h2>FEATURED TEA</h2>
+            </div>
+            <div class="col-sm-6 col-xs-12 rht-align"><a href="offer/trending-now"
+                                                         class="btn btn-default btn-small">View
+                All</a></div>
+        </div>
+        <div class="row">
+
+            <div class="owl-carousel owl-theme prod-slider">
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,325.00</div>
+                            <a
+                                    href=""">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/t1.png')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="">
+                                <h3>
+                                    Jasbirey Organic Black-
+                                    Smooth | Balanced | Amber</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,325.94</div>
+                            <a href="{% url 'khumbutea' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/Khumbu_Organic_Black.png')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'khumbutea' %}">
+                                <h3>Khumbu Organic Black Tea-
+                                    Deep Amber | Malty | Nutty</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,579.00</div>
+                            <a
+                                    href="">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/t1.png')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                    href="">
+                                <h3>Ama Dablan Organic White Tea-
+                                    Floral | Sweet | Golden</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,950.00</div>
+                            <a
+                                    href="">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/T3.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                href="">
+                                <h3>Ruby Organic Oolong Tea-
+                                    Bold Earthy | Complex | Malt </h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 2,500.00</div>
+                            <a href="">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/t4.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="purse">
+                            <a href="http://yalamart.com/item/puluz-light-box-20cm">
+                                <h3>Khumbu Organic Black Tea
+                                    Pure | Astringent | Honey Melon</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <a href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442"
+                               target="_blank">
+                                <div class="ima-bg">See More</div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                    href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442">
+                                <h3>View all product</h3>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

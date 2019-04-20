@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> {% block title %} Local Expo Mart - Nepali local market {% endblock %} </title> 
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/simple-sidebar.css'%}">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'css/control.css' %}" rel="stylesheet" media="all">
+    <link href="{% static 'css/tab-panel.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'css/front.css' %}">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <button onclick="topFunction()" id="gotoBtn" title="Go to top"><i class="fa fa-caret-up"></i></button>
+        <header class="main-header">
+            <nav class="navbar navbar-default">
+            
+                <div class="container">
+                    <div class="next-shipment">
+                        <p class="ttl">Next Shipment</p>
+                        <p id="demo"></p>
+                </div>
+                
+                
+                <div class="search-container google hidden-xs">
+                    <form method="get" action="http://www.google.com/search">
+                          <input type="text" name="q" id="askgoogle" size="31" maxlength="255" value="" placeholder="Ask Google" />
+                          <button type="submit" id="goosearch"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+               
+                <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" aria-expanded="false" aria-controls="navbar" type="button" data-target="#navbar" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                        <img class="image-responsive" alt="LocalExpoMart" src="/static/images/icons/logo.png" width='200' height='100'>
+                        </a>
+                </div>
+                      
+                    <div id="navbar" class="navbar-collapse collapse">
+                                    
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+
+
+                            <li class="dropdown">
+                                <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" aria-expanded="true"
+                                    http="//yalamart.com/product/category">Product <span class="caret"></span></a>
+                                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                    <li class="dropdown">
+                                        <a href="{% url 'products/tea' %}">Tea</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="">Handmade</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'faqs' %}">FAQs</a></li>
+                            <li><a href="{% url 'recommended-shops' %}">Recommended Shops</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'dashboard' %}">My Dashboard</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{% url 'quotes' %}">My Quotes</a></li>
+                                    <li><a href="{% url 'orders' %}">My Orders</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                    <li><a href="{% url 'register' %}">Register</a></li>
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'estimate' %}">Estimate</a></li>
+                            <li>
+                                <a href="{% url 'cart' %}">
+                                    <span class="cart"><img src="/static/images/icons/shopping-cart.png" alt="shopping-cart" width="19" height="20"></span>
+                                    <span class="cart cart-total">NPR.0.00</span>
+                                    <!-- <span class="caret"></span> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            
+            </nav>
+        </header>
+        {% block content %}
+        {% endblock %}
+        <!-- Footer start -->
+        <footer>
+            <div class="container mar-bottom-30">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h3>About Local ExpoMart</h3>
+                        <p>Local Expomart is an Online selling of local product of Nepal.
+                            We facilitate you in buying the authentic Nepali products directly from the producers.
+                            Also help the producers sell their locally made products in global market.</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3>Quick Links</h3>
+                        <ul class="quick">
+                            <!-- <li><a href="#"><i class="fa fa-caret-right"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-caret-right"></i>Team</a></li>-->
+                            <li><a href=""><i
+                                        class="fa fa-caret-right"></i>Business
+                                    Policies</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Return Policy</a></li>
+                            <!-- <li><a href="http://yalamart.com/faqs"><i class="fa fa-caret-right"></i>Faqs</a></li> -->
+                            <li><a href=""><i class="fa fa-caret-right"></i>Customer
+                                    Reviews</a></li>
+                            <li><a href=""><i class="fa fa-caret-right"></i>How to pay</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Get in Touch</h3>
+                        <p>Paknajol</p>
+                        <p><strong>Email</strong>: LocalExpoMart@gmail.com</p>
+                        <p><strong>Mobile</strong>: +977 9873467332</p>
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com/LocalExpoMart/" target="_blank"><i
+                                        class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/LocalExpoMart" target="_blank"><i
+                                        class="fab fa-twitter-square"></i></a></li>
+                            <li><a href="https://instagram.com/LocalExpoMart" target="_blank"><i
+                                        class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div id="footer-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="copyright">
+                            <p>2019 © All Right Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--<a href="#" class="scrollToTop" title="click here for top"><i class="fa fa-angle-up"></i></a>-->
+        <!-- Footer end -->
+
+        <!-- jQuery -->
+        <script src=" {% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("gotoBtn").style.display = "block";
+                } else {
+                    document.getElementById("gotoBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                $('html,body').animate({ scrollTop: 0 }, 'slow');
+                //document.body.scrollTop = 0;
+                //document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#goosearch').on('click', function (e) {
+                    e.preventDefault();
+                    var url = "http://www.google.com/search?q=" + $('#askgoogle').val();
+                    window.open(url, '_blank');
+                });
+            });
+        </script>
+        <script>
+            document.getElementById("demo").innerHTML = "Starts Soon";
+        </script>
+
+    </div>
+</body>
+</html>

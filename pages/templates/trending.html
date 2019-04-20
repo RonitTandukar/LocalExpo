@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock %}
+{% block content %}
+
+<section class="featured">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <h2>TRENDING NOW</h2>
+            </div>
+            
+        </div>
+<div class="row">
+
+    <div class="owl-carousel owl-theme prod-slider">
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 66,279.00</div>
+                    <a
+                            href="{% url 'buddhastatue'%}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/handicraft.jpg')">
+                        </div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a href="{% url 'buddhastatue' %}">
+                        <h3>
+                            High Quality Shakyamuni Buddha Statue with Deep Carving and Chocolate color Finishing </h3>
+                    </a>
+                    <p>Available in stock</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 1,325.94</div>
+                    <a href="{% url 'khumbutea' %}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/Khumbu_Organic_Black.png')">
+                        </div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a href="{% url 'khumbutea' %}">
+                        <h3>Khumbu Organic Black Tea
+                            Deep Amber | Malty | Nutty</h3>
+                    </a>
+                    <p>Available in stock</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 1,57,990.00</div>
+                    <a
+                            href="{% url 'cg' %}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/CGTV.png')">
+                        </div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a
+                            href="{% url 'cg' %}">
+                        <h3>CG-65D7300S – 65″ 4K UHD Smart LED TV</h3>
+                    </a>
+                    <p>Available in stock</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 19,500.00</div>
+                    <a
+                            href="{% url 'carpet' %}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/nepalicarpet.jpg')">
+                        </div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a
+                        href="{% url 'carpet' %}">
+                        <h3>Handmade Nepali carpet</h3>
+                    </a>
+                    <p>Available in stock</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 2,500.00</div>
+                    <a href="{% url 'purse' %}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/bag1.jpg')">
+                        </div>
+                    </a>
+                </div>
+                <div class="purse">
+                    <a href="http://yalamart.com/item/puluz-light-box-20cm">
+                        <h3>Handmade colorful embroidered bag/purse - large</h3>
+                    </a>
+                    <p>Available in stock</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 1,26,000.00</div>
+                    <a href="{% url 'sahana' %}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/sahana1.jpg')">
+                        </div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a href="{% url 'sahana' %}">
+                        <h3>Sahana Djentleman Series Chocochill Whochill</h3>
+                    </a>
+                    <p>Import as per order</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <div class="sticker">NPR 1,56,000.00</div>
+                    <a href="{% url 'st' %}">
+                        <div class="ima"
+                             style="background-image:url('/static/images/STguitar1.jpg')">
+                        </div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a href="{% url 'st' %}">
+                            <h3>Handicraft ST Custom Toucan 6</h3>
+                    </a>
+                    <p>Available in stock</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="wrap">
+                <div class="f-left">
+                    <a href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442"
+                       target="_blank">
+                        <div class="ima-bg">See More</div>
+                    </a>
+                </div>
+                <div class="f-right">
+                    <a
+                            href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442">
+                        <h3>View all product</h3>
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</section>
+{% endblock %}

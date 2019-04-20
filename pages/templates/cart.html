@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock %}
+{% block content %}
+<section class="container mar-top-60">
+	<div class="row">
+		<div class="col-sm-8">
+
+			<h1>My Cart</h1>
+			<!--Shopping Cart table-->
+			<div class="table-responsive">
+				<div id="jmsg" class="alert alert-success no-display" role="alert">
+					<strong>Error!</strong>
+				</div>
+				<form name="frmCart" method="POST" action="/quote/request">
+					<table class="table product-table">
+						<!--Table head-->
+						<thead>
+							<tr>
+								<th class="serialw">S.No.</th>
+								<th class="urlw">Url</th>
+								<th class="qtyw">Qty</th>
+								<th class="commentw">Comment</th>
+								<th></th>
+							</tr>
+						</thead>
+						<!--/Table head-->
+						<!--Table body-->
+						<tbody>
+							{% for showitem in showitems %}
+							<!--First row-->
+							<tr>
+								<td> {{ showitem.id }} </td>
+								<td> {{ showitem.url }}</td>
+								<td> {{ showitem.quantity}} </td>
+								<td></td>
+								<td>
+									<!--<a href="/cart/request/6140" class="btn btn-xs">Request</a> | -->
+									<a href="/quote/delete/6140" class="btn btn-xs" title="Delete">Delete</a>
+									<!-- <i class="fa fa-trash" aria-hidden="true"></i> -->
+								</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+					<div class="col-md-12 pad-btm-20">
+						<div style="text-align: right;">
+							<div style="width: 120px; margin-right: 10px; float:left;">
+								<a href="{% url 'editcart' %}" class="btn btn-default" id="qedit">Edit Cart</a>
+							</div>
+							<div style="width: 160px; float: left;">
+								<button type="submit" class="btn btn-default" id="reqote">Request Quote</button>
+							</div>
+						</div>
+					</div>
+					<input type="hidden" name="_token" value="pOPfNywy2tb09cznPBOUYyp8OSSiNjStL2arg27M">
+				</form>
+			</div>
+			<div class="clear-both"></div>
+
+		</div>
+				<!--<div class="col-sm-12">
+			<h3>Best Seller</h3>
+		</div>-->
+			</div>
+		</div>
+
+
+	</div>
+</section>
+{% endblock %}

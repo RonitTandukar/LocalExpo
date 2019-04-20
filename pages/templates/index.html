@@ -1,0 +1,484 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="top-slider">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill"
+                    style="background-image : url('{% static 'images/slider/banner1.png' %}'); background-position: center center;">
+                </div>
+                <!-- <img src="images/slider/demo-slider-4.jpg" alt="Import - From US" width="100%"> -->
+                <!-- <img src=""  height= "50%" width="100%">-->
+            </div>
+
+            <div class="item">
+                <div class="fill"
+                    style="background-image: url('{% static 'images/slider/banner2.png' %}'); background-position: center center;">
+                </div>
+                <!-- <img src="images/slider/demo-slider-3.jpg" alt="Import - From US" width="100%"> -->
+            </div>
+        </div>
+        <div class="hidden-xs">
+            <section class="page-header">
+                <div class="contact-error-page">
+                    <h1 class="text-center">Welcome to Local Expo Mart</h1>
+                </div>
+            </section>
+
+        </div>
+        
+<section class="container">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="contact-error-page">
+                <!-- <h1 class="text-center">Welcome to Local Expo Mart</h1> -->
+
+                <form class="form-quote" method="POST" name="frmQuote" action=".">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-9 col-sm-8">
+                            <div class="form-group">
+                                <input type="text" name="url" id="url" class="form-control"
+                                    placeholder="Paste your URL: https://www.example.com" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <div class="form-group">
+                                <input type="text" name="quantity" id="quantity" class="form-control"
+                                    placeholder="Quantity" required>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-sm-8">
+                            <div class="form-group">
+                                <textarea class="form-control" name="comment" id="Comment" rows="2"
+                                    placeholder="Add Comment Here"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-4">
+                            <div class="form-group">
+                                <button class="btn btn-default bgred" type="submit">Add to
+                                    cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</section>
+<section class="featured">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <h2>TRENDING NOW</h2>
+            </div>
+            <div class="col-sm-6 col-xs-12 rht-align"><a href="{% url 'trending' %}" class="btn btn-default btn-small">View
+                All</a></div>
+        </div>
+        <div class="row">
+
+            <div class="owl-carousel owl-theme prod-slider">
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 66,279.00</div>
+                            <a
+                                    href="{% url 'buddhastatue'%}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/handicraft.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'buddhastatue' %}">
+                                <h3>
+                                    High Quality Shakyamuni Buddha Statue with Deep Carving and Chocolate color Finishing </h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,325.94</div>
+                            <a href="{% url 'khumbutea' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/Khumbu_Organic_Black.png')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'khumbutea' %}">
+                                <h3>Khumbu Organic Black Tea
+                                    Deep Amber | Malty | Nutty</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,57,990.00</div>
+                            <a
+                                    href="{% url 'cg' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/CGTV.png')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                    href="{% url 'cg' %}">
+                                <h3>CG-65D7300S – 65″ 4K UHD Smart LED TV</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 19,500.00</div>
+                            <a
+                                    href="{% url 'carpet' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/nepalicarpet.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                href="{% url 'carpet' %}">
+                                <h3>Handmade Nepali carpet</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 2,500.00</div>
+                            <a href="{% url 'purse' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/bag1.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="purse">
+                            <a href="http://yalamart.com/item/puluz-light-box-20cm">
+                                <h3>Handmade colorful embroidered bag/purse - large</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,26,000.00</div>
+                            <a href="{% url 'sahana' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/sahana1.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'sahana' %}">
+                                <h3>Sahana Djentleman Series Chocochill Whochill</h3>
+                            </a>
+                            <p>Import as per order</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,56,000.00</div>
+                            <a href="{% url 'st' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/STguitar1.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'st' %}">
+                                    <h3>Handicraft ST Custom Toucan 6</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <a href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442"
+                               target="_blank">
+                                <div class="ima-bg">See More</div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                    href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442">
+                                <h3>View all product</h3>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="featured">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <h2>BEST SELLER BOOKS</h2>
+            </div>
+            <div class="col-sm-6 col-xs-12 rht-align"><a href="offer/best-seller-books"
+                                                         class="btn btn-default btn-small">View
+                All</a></div>
+        </div>
+        <div class="row">
+
+            <div class="owl-carousel owl-theme prod-slider">
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 535.00</div>
+                            <a href="{% url 'bk1' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/karnaliblues.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'bk1' %}">
+                                <h3>कर्नाली ब्लुज [Karnali Blues] 
+
+                                        by Buddhisagar (Goodreads Author), बुद्धिसागर 
+                                        </h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 720.00</div>
+                            <a href="{% url 'bk2' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/HB.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'bk2' %}">
+                                <h3>चिना हराएको मान्छे [China Harayeko Manchhe] 
+
+                                        by Hari Bansha Acharya, हरिवंश आचार्य </h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 800.00</div>
+                            <a href="{% url 'bk3' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/andomanxay.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'bk3' %}">
+                                <h3>घुम्ने मेचमाथि अन्धो मान्छे [Ghumne Mech Mathi Andho Manche] 
+
+                                        by Bhupi Sherchan, भूपी शेरचन </h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 350.00</div>
+                            <a href="{% url 'bk4' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/Jhamak.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a href="{% url 'bk4' %}">
+                                <h3>जीवन काँडा कि फूल [Jiwan Kada ki Phool] 
+
+                                        by Jhamak Ghimire, झमक घिमिरे </h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="wrap">
+                        <div class="f-left">
+                            <div class="sticker">NPR 1,150.00</div>
+                            <a
+                                    href="{% url 'bk5' %}">
+                                <div class="ima"
+                                     style="background-image:url('/static/images/BC.jpg')">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="f-right">
+                            <a
+                                    href="{% url 'bk5' %}">
+                                <h3>Binod Chaudhary: An Autobiography 
+
+                                        by Binod Chaudhary, Sudeep Shrestha (Contributor)</h3>
+                            </a>
+                            <p>Available in stock</p>
+                        </div>
+                        <div class="f-right">
+                                <a
+                                        href="https://www.amazon.com/gp/bestsellers/electronics/ref=sxts_h_sts_bs?pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_p=2ddeca78-465c-4267-a307-7f2fbba84a01&amp;pf_rd_r=X921990HVPHMS5CWVZXG&amp;pd_rd_wg=xLOA7&amp;pf_rd_s=desktop-sx-top-slot&amp;pf_rd_t=301&amp;pd_rd_w=uesVL&amp;pf_rd_i=electronic+best+sellers&amp;pd_rd_r=71d0b4c2-6866-4218-bf88-2d9bac62565c&amp;qid=1533293442">
+                                    <h3>View all product</h3>
+                                </a>
+                            </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="search">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="https://smartdoko.com/" target="_blank"><img
+                                src="/static/images/accessories/smartdoko.png" alt="Etsy" width="100" height="50"></a>
+                    </div>
+                    <div class="item">
+                        <a href="http://handmadeexpo.com/client/index.php" target="_blank"><img
+                                src="/static/images/1500x700-1-e1468398466281.jpg" alt="ebay"></a>
+                    </div>
+                    <div class="item">
+                            <a href="https://www.goodreads.com/list/show/79040.Nepali_Books" target="_blank"><img
+                                    src="/static/images/goodreads.jpg" alt="ebay"></a>
+                    </div>
+                    <div class="item">
+                            <a href="https://www.nepaliteatraders.com/" target="_blank"><img
+                                    src="/static/images/icons/nepalteatrader.jpg" alt="ebay"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="featured testimonial">
+    <div class="container">
+        <div class="row wht-bordr">
+            <div class="blck-title">
+                <h3>Customer Reviews</h3>
+            </div>
+            <div id="owl-testi" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="vw-tm-wrap height-adjust" style="height: 220px;">
+                        <div class="tm-desc">
+                            Thank you for the delivery on time. Keep up the great work. Will surely use your
+                            services again.
+                        </div>
+                        <div class="testimonial-profile">
+                            <h3 class="title">Ronit Tandukar</h3>
+                            <span class="post"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="vw-tm-wrap height-adjust" style="height: 220px;">
+                        <div class="tm-desc">
+                            Excellent service at good reasonable price with good customer service.
+                        </div>
+                        <div class="testimonial-profile">
+                            <h3 class="title">Ashma Shrestha</h3>
+                            <span class="post"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="vw-tm-wrap height-adjust" style="height: 220px;">
+                        <div class="tm-desc">
+                            Easy access to Nepali products. Thanks
+                        </div>
+                        <div class="testimonial-profile">
+                            <h3 class="title">Sushmita Basnet</h3>
+                            <span class="post"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="vw-tm-wrap height-adjust" style="height: 220px;">
+                        <div class="tm-desc">
+                            Excellent service and reasonable price. would definitely recommend.
+                        </div>
+                        <div class="testimonial-profile">
+                            <h3 class="title">Risha Dangol</h3>
+                            <span class="post"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="vw-tm-wrap height-adjust" style="height: 220px;">
+                        <div class="tm-desc">
+                            Love the interactivity.
+                        </div>
+                        <div class="testimonial-profile">
+                            <h3 class="title">Sujina Maharjan</h3>
+                            <span class="post"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

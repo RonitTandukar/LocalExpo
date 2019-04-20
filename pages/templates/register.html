@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Register {% endblock %}
+{% block content %}
+{% load widget_tweaks %}
+<section class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="contact-error-page">
+        <h1 class="text-center">Sign Up</h1>
+        <form class="form-quote" method="POST" name="frmlogin" id="frmLogin" action=".">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="username" id="username" name="username" class="form-control" placeholder="username" value=""
+              required>
+          </div>
+          <div class="form-group">
+            <input type="firstname" id="firstname" name="firstname" class="form-control" placeholder="firstname"
+              value="" required>
+          </div>
+          <div class="form-group">
+            <input type="lastname" id="lastname" name="lastname" class="form-control" placeholder="lastname" value=""
+              required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" value=""
+              required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+              data-match="#cpass" required>
+          </div>
+          <div class="form-group">
+            <input type="password" id="cpass" name="repassword" class="form-control" placeholder="Confirm Password"
+              data-match="#password" required>
+          </div>
+          <div class="form-group">
+            <input type="phone" id="phone" name="phone" class="form-control" placeholder="Phone number" value=""
+              required>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 s_in">
+              <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+            </div>
+            <div class="col-xs-6 sign_up">
+              <!--<div class="forget">
+                          <a href="#"> Forget Passowrd ? </a>
+                      </div>-->
+              <!--<div class="form-group">
+                          <a href="/login" class="btn btn-success">Sign In</a>
+                      </div>-->
+            </div>
+          </div>
+          <input type="hidden" name="_token" value="iV4RyH2zhdOR1P1HKl8zqC9W3mUAdovEmbjhexag">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

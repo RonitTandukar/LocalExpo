@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Quotes {% endblock %}
+{% block content %}
+<section class="container styl">
+    <div class="row">
+    	<div class="col-sm-12">
+	    	<h1>Quotes</h1>
+			<!--Shopping Cart table-->
+			<div class="table-responsive">
+												
+
+				<div class="tabbable-panel">
+					<div class="tabbable-line">
+						<ul class="nav nav-tabs ">
+							<li class="active">
+								<a href="#quoted" data-toggle="tab">Quoted</a>
+							</li>
+							<li>
+								<a href="#request" data-toggle="tab">Pending</a>
+							</li>
+							<li>
+								<a href="#cancelled" data-toggle="tab">Cancelled</a>
+							</li>
+							<li>
+								<a href="#orders" data-toggle="tab">Orders</a>
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="quoted">
+								<table class="table product-table">
+			        <!--Table head-->
+			        <thead>
+			            <tr>
+			                <th class="serialw">Item</th>
+			                <th class="itm-name">Name</th>
+			                <th class="urlw">Url</th>
+			                <th class="qtyw">Qty</th>
+			                <th class="itm-cost">Cost</th>
+			                <th class="itm-date">Date</th>
+			                <th></th>
+			            </tr>
+			        </thead>
+			        <!--/Table head-->
+			        <!--Table body-->
+			        <tbody>
+			        	
+			          										<tr>
+				                <td colspan="7">No items in cart</td>
+				            </tr>
+				        
+			        </tbody>
+			    </table>
+							</div>
+							<div class="tab-pane" id="request">
+								<table class="table product-table">
+			        <!--Table head-->
+			        <thead>
+			            <tr>
+			                <th class="serialw">Item</th>
+			                <th class="urlw">Url</th>
+			                <th class="qtyw">Qty</th>
+			                <th class="commentw">Comment</th>
+			                <th class="actionw"></th>
+			            </tr>
+			        </thead>
+			        <!--/Table head-->
+			        <!--Table body-->
+			        <tbody>
+			        	
+			            							<tr>
+				                <td colspan="5">No quotes found</td>
+				            </tr>
+				        
+			        </tbody>
+			    </table>
+
+<script>
+window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove();
+    });
+}, 30000);
+</script>
+							</div>
+							<div class="tab-pane" id="cancelled">
+								<table class="table product-table">
+			        <!--Table head-->
+			        <thead>
+			            <tr>
+			                <th class="serialw">Item</th>
+			                <th class="commentw">Name</th>
+			                <th class="urlw">Url</th>
+			                <th class="qtyw">Qty</th>
+			                <th class="itm-cost">Cost</th>
+			                <th></th>
+			            </tr>
+			        </thead>
+			        <!--/Table head-->
+			        <!--Table body-->
+			        <tbody>
+			        	
+			            														    <!--First row-->
+						            <tr>
+						            	<td class="serialw">#5440</td>
+						            	<td class="commentw"></td>
+						                <td class="urlw"><a href="https://www.aliexpress.com/item/PIVOKA-300ml-USB-Electric-Aroma-Air-Diffuser-Wood-Ultrasonic-Air-Humidifier-Essential-Oil-Aromatherapy-Cool-Mist/32946592835.html?spm=a2g01.11715694.fdpcl001.1.779225c4o3oaay&amp;gps-id=5547572&amp;scm=1007.19201.111800.0&amp;scm_id=10" target="_blank">www.aliexpress.com</a></td>
+						                <td class="qtyw">1</td>
+						                <td class="itm-cost">Rs. 0.00</td>
+						                <td>
+						                	<a href="/requote/5440" title="Re - Quote">Re-Quote</a> |
+						                	<a href="/view/5440" title="View Quote">View</a>
+						                </td>
+						            </tr>
+						        													
+			        </tbody>
+			    </table>
+							</div>
+							<div class="tab-pane" id="orders">
+								<div class="container">
+    <div class="row">
+			<div class="col-md-12 col-sm-12">
+        <h1>My Import Orders</h1>
+        <div class="table-responsive">
+				<table class="table product-table">
+	        <!--Table head-->
+	        <thead>
+	            <tr>
+	                <th class="serialw">S.No.</th>
+	                <th>Order ID</th>
+	                <th>Date</th>
+	                <th class="al-cntr">Items</th>
+	                <th>Total</th>
+	                <th>Payment</th>
+                  <th></th>
+	            </tr>
+	        </thead>
+	        <!--/Table head-->
+	        <!--Table body-->
+	        <tbody>
+	        	
+	            			         <tr>
+                   <td colspan="7">Not ordered yet!!!</td>
+               </tr>
+		          
+	          </tbody>
+
+			    </table>
+        </div>
+        <div class="clear-both"></div>
+        <div class="table-responsive">
+  <h2>Direct Purchase Orders</h2>
+  <table class="table product-table">
+    <!--Table head-->
+    <thead>
+        <tr>
+            <th class="serialw">S.No.</th>
+            <th>Order ID</th>
+            <th>Date</th>
+            <th class="al-cntr">Items</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <!--/Table head-->
+    <!--Table body-->
+    <tbody>
+             <tr>
+           <td colspan="7">Not ordered yet!!!</td>
+       </tr>
+          </tbody>
+  </table>
+</div>
+			</div>
+
+		</div>
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+        			</div>
+
+    </div>
+
+
+	</div>
+</section>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Orders {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <h1>My Import Orders</h1>
+            <div class="table-responsive">
+                <table class="table product-table">
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th class="serialw">S.No.</th>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th class="al-cntr">Items</th>
+                            <th>Total</th>
+                            <th>Payment</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <!--/Table head-->
+                    <!--Table body-->
+                    <tbody>
+
+                        <tr>
+                            <td colspan="7">Not ordered yet!!!</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="clear-both"></div>
+            <div class="table-responsive">
+                <h2>Direct Purchase Orders</h2>
+                <table class="table product-table">
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th class="serialw">S.No.</th>
+                            <th>Order ID</th>
+                            <th>Date</th>
+                            <th class="al-cntr">Items</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <!--/Table head-->
+                    <!--Table body-->
+                    <tbody>
+                        <tr>
+                            <td colspan="7">Not ordered yet!!!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
