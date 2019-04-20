@@ -1,0 +1,271 @@
+/*!
+ * Bootstrap Responsive v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+ .clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* Landscape tablet */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+.static-search h3{
+    font-size: 21px;
+}
+section#search #owl-demo img {
+    height: 55px;
+}
+
+
+}
+
+@media only screen and (min-width: 768px){
+  .main-menu .navigation > li > ul, .main-menu .navigation > li > ul > li > ul {
+      display: block !important;
+      visibility: hidden;
+      opacity: 0;
+  }
+}
+
+
+/* Portrait tablet @media (min-width: 768px) and (max-width : 979px) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+section#search{
+    text-align: center
+}
+section#search #owl-demo img {
+    height: 110px;
+}
+
+
+}
+
+
+/*  #Mobile (Portrait)
+ ================================================== */
+
+
+/* Note: Design for a width of 320px */
+
+@media only screen and (max-width: 767px) {
+
+.logout-but {display: inline-block;}
+.log-wel { display: none;}
+section#search{
+    text-align: center
+}
+.welcome {
+    position: absolute;
+    bottom: -240px;
+}
+.notify .header, .notify li>p {line-height: 22px; color: #ddd;}
+.notify li { width: 330px; min-height: 50px;}
+.notify li>p>a {color: #fff;text-decoration: underline;}
+.notify {padding-left: 15px;}
+.dropdown .dropdown-menu {margin-left: 15px;}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {color: #ddd;}
+.dropdown-menu>li>a, .dropdown-menu>li>.txto {color: #ddd;}
+#navbar .dropdown-menu {
+    border-radius: 0px;
+    min-width: 170px;
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: rgba(0,0,0, .5)!important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-right: 15px;
+}
+.testimonial .blck-title {padding: 0 15px;}
+.navbar-default .keyword {left: 23%!important;}
+.navbar-default .search-container input[type=text] {width: 160px!important;}
+
+.navbar-default .search-container button {
+    margin-right: 16px!important;
+}
+.navbar-default .search-container {
+    top: -8px!important;
+    width: 235px!important;
+}
+
+
+
+section#header {
+    margin-bottom: 290px;
+}
+section#search #owl-demo img {
+    height: 114px;
+}
+section#search {
+    margin-bottom: 30px;
+}
+.sidebar-top {
+    margin-bottom: 35px;
+}
+.search-aside {
+    margin-bottom: 15px;
+}
+.side-address {
+    margin-top: 35px;
+}
+.inner-header {
+    margin-bottom: 80px !important;
+}
+.success {
+    margin-bottom: 40px;
+}
+.r-success{
+    margin-bottom: 40px;
+}
+.condition h1{
+    font-size: 22px;
+}
+.about-contain {
+    text-align: left;
+    margin-bottom: 40px;
+}
+.contact-page .container {
+    padding: 30px;
+}
+
+}
+
+@media only screen and (max-width: 640px) {
+
+section#search #owl-demo img {
+    height: 88px;
+}
+.sign-up span, .main-menu p {
+    display: none !important;
+}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+/*.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    height: 65px;
+}*/
+#howto {height: 210px!important;}
+#top-slider .carousel .item {height: 220px!important;}
+.brand-logo {flex: 0.5;}
+.usertxt {font-size: 12px!important;}
+
+/*section#header {margin-bottom: 10px!important;}*/
+
+li.account {
+    display: none !important;
+}
+li.sign-up .btn-default {
+    background: transparent;
+    padding: 0;
+    text-transform: uppercase;
+    margin-top: -18px;
+}
+.main-menu {
+    margin-top: 0;
+    flex: none;
+    text-align: right;
+}
+#mycart {
+    margin-right: 5px;
+}
+
+footer .col-xs-5, footer .col-xs-7{
+    width: 100%;
+    text-align: center;
+}
+footer .foot-nav {
+    text-align: center;
+}
+section#search #owl-demo img {
+    height: 55px;
+}
+.login {
+    flex: 1;
+    text-align: center;
+}
+.login ul li {
+    margin-right: 8px;
+}
+.login ul li:first-child {
+    padding-right: 10px;
+}
+.welcome form {
+    padding: 35px 15px 5px 15px;
+}
+.top-nav-collapse .login, .top-nav-collapse .main-menu{
+    margin-top: 15px;
+}
+#wrapper.toggled {
+    padding-right: 0;
+}
+.scrollToTop {
+    bottom: 81px;
+}
+.inner-header {
+    height: 65px !important;
+}
+.modal-dialog {
+    width: 340px;
+}
+.s_in, .sign_up{
+    font-size: 12px;
+}
+.MultiCarousel {margin:0px!important;}
+
+}
+
+@media only screen and (max-width: 360px) {
+#howto {height: 165px!important;}
+.login ul li {
+    margin-right: 5px;
+    line-height: 13px;
+}
+.login ul li:first-child {
+    padding-right: 10px;
+}
+.welcome h1{
+    font-size: 25px;
+}
+.static-search h3{
+    font-size: 21px;
+}
+.brand-logo a {
+    width: 25%;
+}
+.modal-dialog {
+    width: 280px;
+}
+.col-xs-6.s_in, .col-xs-6.sign_up{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+}
